@@ -1,0 +1,132 @@
+Location Manager State:
+  User Info:
+    current users: u[0]
+  Location Settings:
+    Location Setting: true
+    Location Allow/Deny Packages:
+    Throttling Allow Packages:
+      com.google.android.gms
+    Bypass Allow Packages:
+      com.google.android.dialer[*]
+      com.google.android.gms[.thunderbird]
+  Location Providers:
+    passive provider:
+      service: registered
+      listeners:
+        1000/android[SensorNotificationService]/F9EF55B9 Request[PASSIVE, minUpdateInterval=+30m0s0ms, minUpdateDistance=100000.0, WorkSource{1000 android}]
+        10222/com.autonavi.minimap/82410EA8 Request[PASSIVE, minUpdateInterval=+1s0ms, WorkSource{10222 com.autonavi.minimap}]
+      last location=Location[gps 29.504377,105.694495 hAcc=19.296001 et=+1m39s672ms alt=353.5811767578125 vAcc=8.0 vel=2.02 sAcc=4.2953463 bear=168.9 bAcc=83.11379 {Bundle[{satellites=11, maxCn0=29, meanCn0=22}]}]
+      enabled=true
+      allowed=true
+      identity=1000/android[LocationService]
+      properties=ProviderProperties[powerUsage=Low, accuracy=Fine]
+    fused provider:
+      service: ProviderRequest[OFF]
+      last location=null
+      enabled=true
+      allowed=true
+      identity=1000/com.android.location.fused
+      properties=ProviderProperties[powerUsage=Low, accuracy=Fine, supports=[bearing,speed,altitude]]
+      stationary throttled=false (not idle) (not stationary)
+      target service=1000/com.android.location.fused/.FusedLocationService@0
+      connected=true
+    gps provider:
+      service: ProviderRequest[@+1s0ms, HIGH_ACCURACY, WorkSource{10222 com.autonavi.minimap}]
+      listeners:
+        10222/com.autonavi.minimap/EFEA40F1 Request[@+1s0ms HIGH_ACCURACY, WorkSource{10222 com.autonavi.minimap}]
+      last location=Location[gps 29.504377,105.694495 hAcc=19.296001 et=+1m39s672ms alt=353.5811767578125 vAcc=8.0 vel=2.02 sAcc=4.2953463 bear=168.9 bAcc=83.11379 {Bundle[{satellites=11, maxCn0=29, meanCn0=22}]}]
+      enabled=true
+      allowed=true
+      identity=1000/android[GnssService]
+      properties=ProviderProperties[powerUsage=High, accuracy=Fine, requires=satellite, supports=[bearing,speed,altitude]]
+      stationary throttled=false (not idle) (not stationary)
+      mStarted=true   (changed +39s250ms ago)
+      mBatchingEnabled=true
+      mBatchingStarted=false
+      mBatchSize=20
+      mFixInterval=1000
+      GNSS_KPI_START
+        KPI logging start time: +10s795ms
+        KPI logging end time: +1m42s235ms
+        Number of location reports: 33
+        Percentage location failure: 12.121212121212121
+        Number of TTFF reports: 1
+        TTFF mean (sec): 3.911
+        TTFF standard deviation (sec): 0.0
+        Number of position accuracy reports: 29
+        Position accuracy mean (m): 7.356138097828832
+        Position accuracy standard deviation (m): 5.002241860593224
+        Number of CN0 reports: 31
+        Top 4 Avg CN0 mean (dB-Hz): 37.56048394787696
+        Top 4 Avg CN0 standard deviation (dB-Hz): 3.9774400947945647
+        Total number of sv status messages processed: 1073
+        Total number of L5 sv status messages processed: 0
+        Total number of sv status messages processed, where sv is used in fix: 523
+        Total number of L5 sv status messages processed, where sv is used in fix: 0
+        Number of L5 CN0 reports: 0
+        Used-in-fix constellation types: GPS GLONASS BEIDOU GALILEO 
+      GNSS_KPI_END
+      Power Metrics
+        Time on battery (min): 59.41448333333334
+        Amount of time (while on battery) Top 4 Avg CN0 > 20.0 dB-Hz (min): 11.634716666666666
+        Amount of time (while on battery) Top 4 Avg CN0 <= 20.0 dB-Hz (min): 0.017416666666666667
+        Energy consumed while on battery (mAh): 1.3669627777777777
+      Hardware Version: MP1.0
+  Historical Aggregate Location Provider Data:
+    passive:
+      1000/android[SensorNotificationService]: min/max interval = passive/passive, total/active/foreground duration = +1m29s66ms/+1m29s64ms/+1m29s64ms, locations = 1
+      10222/com.autonavi.minimap: min/max interval = passive/passive, total/active/foreground duration = +39s324ms/+39s324ms/+39s324ms, locations = 29
+    gps:
+      10222/com.autonavi.minimap: min/max interval = 1s/1s, total/active/foreground duration = +39s269ms/+39s269ms/+39s269ms, locations = 28
+  GNSS Manager:
+    Capabilities: [SCHEDULING MSB GEOFENCING]
+    Status Provider:
+      service: registered
+      listeners:
+        10222/com.autonavi.minimap/D5E76C9C
+    Measurements Provider:
+      service: GnssMeasurementRequest[]
+      listeners:
+        10222/com.autonavi.minimap/00EC64F9 GnssMeasurementRequest[]
+  Geofence Manager:
+    service: unregistered
+  Event Log:
+    10-18 08:49:18.838: passive provider [u0] enabled
+    10-18 08:49:19.865: gps provider [u0] enabled
+    10-18 08:49:20.301: passive provider [u0] enabled
+    10-18 08:49:20.301: gps provider [u0] enabled
+    10-18 08:49:20.661: fused provider [u0] enabled
+    10-18 08:49:22.215: passive provider +registration 1000/android[SensorNotificationService]/F9EF55B9 -> Request[PASSIVE, minUpdateInterval=+30m0s0ms, minUpdateDistance=100000.0, WorkSource{1000 android}]
+    10-18 08:49:22.220: passive provider request = ProviderRequest[@0]
+    10-18 08:50:11.958: passive provider +registration 10222/com.autonavi.minimap/82410EA8 -> Request[PASSIVE, minUpdateInterval=+1s0ms, WorkSource{10222 com.autonavi.minimap}]
+    10-18 08:50:12.013: gps provider +registration 10222/com.autonavi.minimap/EFEA40F1 -> Request[@+1s0ms HIGH_ACCURACY, WorkSource{10222 com.autonavi.minimap}]
+    10-18 08:50:12.014: gps provider request = ProviderRequest[@+1s0ms, HIGH_ACCURACY, WorkSource{10222 com.autonavi.minimap}]
+    10-18 08:50:15.947: gps provider received location[1]
+    10-18 08:50:21.939: gps provider received location[1]
+    10-18 08:50:22.945: gps provider received location[1]
+    10-18 08:50:23.939: gps provider received location[1]
+    10-18 08:50:24.938: gps provider received location[1]
+    10-18 08:50:25.953: gps provider received location[1]
+    10-18 08:50:26.953: gps provider received location[1]
+    10-18 08:50:27.954: gps provider received location[1]
+    10-18 08:50:28.952: gps provider received location[1]
+    10-18 08:50:29.954: gps provider received location[1]
+    10-18 08:50:30.722: gps provider received location[1]
+    10-18 08:50:31.719: gps provider received location[1]
+    10-18 08:50:32.716: gps provider received location[1]
+    10-18 08:50:33.716: gps provider received location[1]
+    10-18 08:50:34.716: gps provider received location[1]
+    10-18 08:50:35.717: gps provider received location[1]
+    10-18 08:50:36.718: gps provider received location[1]
+    10-18 08:50:37.718: gps provider received location[1]
+    10-18 08:50:38.724: gps provider received location[1]
+    10-18 08:50:39.721: gps provider received location[1]
+    10-18 08:50:40.717: gps provider received location[1]
+    10-18 08:50:41.713: gps provider received location[1]
+    10-18 08:50:42.730: gps provider received location[1]
+    10-18 08:50:43.717: gps provider received location[1]
+    10-18 08:50:44.712: gps provider received location[1]
+    10-18 08:50:45.712: gps provider received location[1]
+    10-18 08:50:46.714: gps provider received location[1]
+    10-18 08:50:47.719: gps provider received location[1]
+    10-18 08:50:48.719: gps provider received location[1]
