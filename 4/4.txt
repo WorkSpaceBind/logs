@@ -1,0 +1,233 @@
++ logcat -b all -d
++ grep -iE 'adbd|Could not set SELinux context|avc: denied|service.adb.root'
+04-30 03:11:48.723   743   743 I auditd  : type=1400 audit(0.0:4): avc: denied { read write } for comm="android.hardwar" name="diag" dev="tmpfs" ino=25725 scontext=u:r:hal_graphics_composer_default:s0 tcontext=u:object_r:diag_device:s0 tclass=chr_file permissive=0
+10-18 16:03:53.083     1     1 I auditd  : type=1400 audit(0.0:5): avc: denied { getattr } for comm="init" path="/product/bin/check_dynamic_partitions" dev="dm-7" ino=303 scontext=u:r:init:s0 tcontext=u:object_r:postinstall_exec:s0 tclass=file permissive=0
+10-18 16:03:53.800  1074  1074 I auditd  : type=1400 audit(0.0:6): avc: denied { search } for comm="vendor.google.r" name="radio" dev="dm-8" ino=237 scontext=u:r:hal_radioext_default:s0 tcontext=u:object_r:radio_vendor_data_file:s0 tclass=dir permissive=0
+10-18 16:03:53.820  1122  1122 I auditd  : type=1400 audit(0.0:7): avc: denied { read write } for comm="sensors.qti" name="diag" dev="tmpfs" ino=25725 scontext=u:r:sensors:s0 tcontext=u:object_r:diag_device:s0 tclass=chr_file permissive=0
+10-18 16:03:53.823  1122  1122 I auditd  : type=1400 audit(0.0:8): avc: denied { create } for comm="sensors.qti" name="sns_diag_flush" scontext=u:r:sensors:s0 tcontext=u:object_r:persist_sensors_file:s0 tclass=fifo_file permissive=0
+10-18 16:03:53.873  1001  1001 I auditd  : type=1400 audit(0.0:9): avc: denied { write } for comm="main" name="properties_serial" dev="tmpfs" ino=25638 scontext=u:r:zygote:s0 tcontext=u:object_r:properties_serial:s0 tclass=file permissive=0
+10-18 16:03:54.106  1211  1211 I auditd  : type=1400 audit(0.0:10): avc: denied { read write } for comm="netmgrd" name="diag" dev="tmpfs" ino=25725 scontext=u:r:netmgrd:s0 tcontext=u:object_r:diag_device:s0 tclass=chr_file permissive=0
+10-18 16:03:54.196  1204  1204 I auditd  : type=1400 audit(0.0:11): avc: denied { read write } for comm="cnd" name="diag" dev="tmpfs" ino=25725 scontext=u:r:cnd:s0 tcontext=u:object_r:diag_device:s0 tclass=chr_file permissive=0
+10-18 16:03:54.213  1211  1211 I auditd  : type=1400 audit(0.0:12): avc: denied { read write } for comm="netmgrd" name="diag" dev="tmpfs" ino=25725 scontext=u:r:netmgrd:s0 tcontext=u:object_r:diag_device:s0 tclass=chr_file permissive=0
+10-18 16:03:54.220  1211  1211 I auditd  : type=1400 audit(0.0:13): avc: denied { read write } for comm="netmgrd" name="diag" dev="tmpfs" ino=25725 scontext=u:r:netmgrd:s0 tcontext=u:object_r:diag_device:s0 tclass=chr_file permissive=0
+10-18 16:03:54.350  1002  1002 I auditd  : type=1400 audit(0.0:15): avc: denied { write } for comm="main" name="properties_serial" dev="tmpfs" ino=25638 scontext=u:r:zygote:s0 tcontext=u:object_r:properties_serial:s0 tclass=file permissive=0
+10-18 16:03:54.670  1297  1297 I auditd  : type=1400 audit(0.0:16): avc: denied { read write } for comm="qcrild" name="diag" dev="tmpfs" ino=25725 scontext=u:r:rild:s0 tcontext=u:object_r:diag_device:s0 tclass=chr_file permissive=0
+10-18 16:03:54.896  1297  1297 I auditd  : type=1400 audit(0.0:17): avc: denied { read write } for comm="rild" name="diag" dev="tmpfs" ino=25725 scontext=u:r:rild:s0 tcontext=u:object_r:diag_device:s0 tclass=chr_file permissive=0
+10-18 16:03:55.256  1040  1040 I auditd  : type=1400 audit(0.0:18): avc: denied { read write } for comm="audio.service" name="diag" dev="tmpfs" ino=25725 scontext=u:r:hal_audio_default:s0 tcontext=u:object_r:diag_device:s0 tclass=chr_file permissive=0
+10-18 16:03:55.856  1062  1062 I auditd  : type=1400 audit(0.0:19): avc: denied { read write } for comm="android.hardwar" name="diag" dev="tmpfs" ino=25725 scontext=u:r:hal_sensors_default:s0 tcontext=u:object_r:diag_device:s0 tclass=chr_file permissive=0
+10-18 16:03:55.856  1062  1062 I auditd  : type=1400 audit(0.0:20): avc: denied { read write } for comm="android.hardwar" name="diag" dev="tmpfs" ino=25725 scontext=u:r:hal_sensors_default:s0 tcontext=u:object_r:diag_device:s0 tclass=chr_file permissive=0
+10-18 16:03:55.856  1062  1062 I auditd  : type=1400 audit(0.0:21): avc: denied { read write } for comm="android.hardwar" name="diag" dev="tmpfs" ino=25725 scontext=u:r:hal_sensors_default:s0 tcontext=u:object_r:diag_device:s0 tclass=chr_file permissive=0
+10-18 16:03:55.856  1062  1062 I auditd  : type=1400 audit(0.0:22): avc: denied { read write } for comm="android.hardwar" name="diag" dev="tmpfs" ino=25725 scontext=u:r:hal_sensors_default:s0 tcontext=u:object_r:diag_device:s0 tclass=chr_file permissive=0
+10-18 16:03:55.856  1062  1062 I auditd  : type=1400 audit(0.0:23): avc: denied { read write } for comm="android.hardwar" name="diag" dev="tmpfs" ino=25725 scontext=u:r:hal_sensors_default:s0 tcontext=u:object_r:diag_device:s0 tclass=chr_file permissive=0
+10-18 16:03:55.856  1062  1062 I auditd  : type=1400 audit(0.0:24): avc: denied { read write } for comm="android.hardwar" name="diag" dev="tmpfs" ino=25725 scontext=u:r:hal_sensors_default:s0 tcontext=u:object_r:diag_device:s0 tclass=chr_file permissive=0
+10-18 16:03:55.856  1062  1062 I auditd  : type=1400 audit(0.0:25): avc: denied { read write } for comm="android.hardwar" name="diag" dev="tmpfs" ino=25725 scontext=u:r:hal_sensors_default:s0 tcontext=u:object_r:diag_device:s0 tclass=chr_file permissive=0
+10-18 16:03:55.856  1062  1062 I auditd  : type=1400 audit(0.0:26): avc: denied { read write } for comm="android.hardwar" name="diag" dev="tmpfs" ino=25725 scontext=u:r:hal_sensors_default:s0 tcontext=u:object_r:diag_device:s0 tclass=chr_file permissive=0
+10-18 16:03:55.856  1062  1062 I auditd  : type=1400 audit(0.0:27): avc: denied { read write } for comm="android.hardwar" name="diag" dev="tmpfs" ino=25725 scontext=u:r:hal_sensors_default:s0 tcontext=u:object_r:diag_device:s0 tclass=chr_file permissive=0
+10-18 16:03:55.856  1062  1062 I auditd  : type=1400 audit(0.0:28): avc: denied { read write } for comm="android.hardwar" name="diag" dev="tmpfs" ino=25725 scontext=u:r:hal_sensors_default:s0 tcontext=u:object_r:diag_device:s0 tclass=chr_file permissive=0
+10-18 16:03:55.856  1062  1062 I auditd  : type=1400 audit(0.0:29): avc: denied { read write } for comm="android.hardwar" name="diag" dev="tmpfs" ino=25725 scontext=u:r:hal_sensors_default:s0 tcontext=u:object_r:diag_device:s0 tclass=chr_file permissive=0
+10-18 16:03:55.856  1062  1062 I auditd  : type=1400 audit(0.0:30): avc: denied { read write } for comm="android.hardwar" name="diag" dev="tmpfs" ino=25725 scontext=u:r:hal_sensors_default:s0 tcontext=u:object_r:diag_device:s0 tclass=chr_file permissive=0
+10-18 16:03:55.860  1062  1062 I auditd  : type=1400 audit(0.0:31): avc: denied { read write } for comm="android.hardwar" name="diag" dev="tmpfs" ino=25725 scontext=u:r:hal_sensors_default:s0 tcontext=u:object_r:diag_device:s0 tclass=chr_file permissive=0
+10-18 16:03:55.860  1062  1062 I auditd  : type=1400 audit(0.0:32): avc: denied { read write } for comm="android.hardwar" name="diag" dev="tmpfs" ino=25725 scontext=u:r:hal_sensors_default:s0 tcontext=u:object_r:diag_device:s0 tclass=chr_file permissive=0
+10-18 16:03:55.860  1062  1062 I auditd  : type=1400 audit(0.0:33): avc: denied { read write } for comm="android.hardwar" name="diag" dev="tmpfs" ino=25725 scontext=u:r:hal_sensors_default:s0 tcontext=u:object_r:diag_device:s0 tclass=chr_file permissive=0
+10-18 16:03:55.863  1062  1062 I auditd  : type=1400 audit(0.0:34): avc: denied { read write } for comm="android.hardwar" name="diag" dev="tmpfs" ino=25725 scontext=u:r:hal_sensors_default:s0 tcontext=u:object_r:diag_device:s0 tclass=chr_file permissive=0
+10-18 16:03:55.903  1651  1651 I auditd  : type=1400 audit(0.0:35): avc: denied { read } for comm="system_server" name="u:object_r:vendor_default_prop:s0" dev="tmpfs" ino=20473 scontext=u:r:system_server:s0 tcontext=u:object_r:vendor_default_prop:s0 tclass=file permissive=0 bug=b/79617173
+10-18 16:03:56.276  1297  1297 I auditd  : type=1400 audit(0.0:36): avc: denied { read write } for comm="DataModule-Loop" name="diag" dev="tmpfs" ino=25725 scontext=u:r:rild:s0 tcontext=u:object_r:diag_device:s0 tclass=chr_file permissive=0
+10-18 16:03:56.276  1297  1297 I auditd  : type=1400 audit(0.0:37): avc: denied { read write } for comm="DataModule-Loop" name="diag" dev="tmpfs" ino=25725 scontext=u:r:rild:s0 tcontext=u:object_r:diag_device:s0 tclass=chr_file permissive=0
+10-18 16:03:56.276  1297  1297 I auditd  : type=1400 audit(0.0:38): avc: denied { read write } for comm="DataModule-Loop" name="diag" dev="tmpfs" ino=25725 scontext=u:r:rild:s0 tcontext=u:object_r:diag_device:s0 tclass=chr_file permissive=0
+10-18 16:03:57.163  1074  1074 I auditd  : type=1400 audit(0.0:39): avc: denied { search } for comm="radioext@1.0-se" name="radio" dev="dm-8" ino=237 scontext=u:r:hal_radioext_default:s0 tcontext=u:object_r:radio_vendor_data_file:s0 tclass=dir permissive=0
+10-18 16:03:57.163  1074  1074 I auditd  : type=1400 audit(0.0:40): avc: denied { search } for comm="radioext@1.0-se" name="radio" dev="dm-8" ino=237 scontext=u:r:hal_radioext_default:s0 tcontext=u:object_r:radio_vendor_data_file:s0 tclass=dir permissive=0
+10-18 16:03:57.220  1074  1074 I auditd  : type=1400 audit(0.0:41): avc: denied { search } for comm="radioext@1.0-se" name="radio" dev="dm-8" ino=237 scontext=u:r:hal_radioext_default:s0 tcontext=u:object_r:radio_vendor_data_file:s0 tclass=dir permissive=0
+10-18 16:03:57.256  1297  1297 I auditd  : type=1400 audit(0.0:42): avc: denied { read write } for comm="DataModule-Loop" name="diag" dev="tmpfs" ino=25725 scontext=u:r:rild:s0 tcontext=u:object_r:diag_device:s0 tclass=chr_file permissive=0
+10-18 16:03:59.450  1062  1062 I auditd  : type=1400 audit(0.0:43): avc: denied { read write } for comm="sensors@2.0-ser" name="diag" dev="tmpfs" ino=25725 scontext=u:r:hal_sensors_default:s0 tcontext=u:object_r:diag_device:s0 tclass=chr_file permissive=0
+10-18 16:04:00.120  1052  1052 I auditd  : type=1400 audit(0.0:44): avc: denied { read write } for comm="Loc_hal" name="diag" dev="tmpfs" ino=25725 scontext=u:r:hal_gnss_qti:s0 tcontext=u:object_r:diag_device:s0 tclass=chr_file permissive=0
+10-18 16:04:00.120  1052  1052 I auditd  : type=1400 audit(0.0:45): avc: denied { read write } for comm="Loc_hal" name="diag" dev="tmpfs" ino=25725 scontext=u:r:hal_gnss_qti:s0 tcontext=u:object_r:diag_device:s0 tclass=chr_file permissive=0
+10-18 16:04:00.120  1052  1052 I auditd  : type=1400 audit(0.0:46): avc: denied { read write } for comm="Loc_hal" name="diag" dev="tmpfs" ino=25725 scontext=u:r:hal_gnss_qti:s0 tcontext=u:object_r:diag_device:s0 tclass=chr_file permissive=0
+10-18 16:04:00.743  1076  1076 I auditd  : type=1400 audit(0.0:47): avc: denied { read } for comm="wifi_ext@1.0-se" name="u:object_r:persist_vendor_debug_wifi_prop:s0" dev="tmpfs" ino=20406 scontext=u:r:hal_wifi_ext:s0 tcontext=u:object_r:persist_vendor_debug_wifi_prop:s0 tclass=file permissive=0
+10-18 16:04:01.266  2752  2752 I auditd  : type=1400 audit(0.0:51): avc: denied { read write } for comm="ims_rtp_daemon" name="diag" dev="tmpfs" ino=25725 scontext=u:r:hal_imsrtp:s0 tcontext=u:object_r:diag_device:s0 tclass=chr_file permissive=0
+10-18 16:04:01.270  2752  2752 I auditd  : type=1400 audit(0.0:52): avc: denied { read write } for comm="ims_rtp_daemon" name="diag" dev="tmpfs" ino=25725 scontext=u:r:hal_imsrtp:s0 tcontext=u:object_r:diag_device:s0 tclass=chr_file permissive=0
+10-18 16:04:02.180  1651  1651 I auditd  : type=1400 audit(0.0:53): avc: denied { read } for comm="Binder:1651_9" name="u:object_r:vendor_default_prop:s0" dev="tmpfs" ino=20473 scontext=u:r:system_server:s0 tcontext=u:object_r:vendor_default_prop:s0 tclass=file permissive=0 bug=b/79617173
+10-18 16:04:03.303  1074  1074 I auditd  : type=1400 audit(0.0:54): avc: denied { search } for comm="radioext@1.0-se" name="radio" dev="dm-8" ino=237 scontext=u:r:hal_radioext_default:s0 tcontext=u:object_r:radio_vendor_data_file:s0 tclass=dir permissive=0
+10-18 16:04:03.303  1074  1074 I auditd  : type=1400 audit(0.0:55): avc: denied { search } for comm="radioext@1.0-se" name="radio" dev="dm-8" ino=237 scontext=u:r:hal_radioext_default:s0 tcontext=u:object_r:radio_vendor_data_file:s0 tclass=dir permissive=0
+10-18 16:04:03.303  1074  1074 I auditd  : type=1400 audit(0.0:56): avc: denied { search } for comm="radioext@1.0-se" name="radio" dev="dm-8" ino=237 scontext=u:r:hal_radioext_default:s0 tcontext=u:object_r:radio_vendor_data_file:s0 tclass=dir permissive=0
+10-18 16:04:03.303  1074  1074 I auditd  : type=1400 audit(0.0:57): avc: denied { search } for comm="radioext@1.0-se" name="radio" dev="dm-8" ino=237 scontext=u:r:hal_radioext_default:s0 tcontext=u:object_r:radio_vendor_data_file:s0 tclass=dir permissive=0
+10-18 16:04:03.303  1074  1074 I auditd  : type=1400 audit(0.0:58): avc: denied { search } for comm="radioext@1.0-se" name="radio" dev="dm-8" ino=237 scontext=u:r:hal_radioext_default:s0 tcontext=u:object_r:radio_vendor_data_file:s0 tclass=dir permissive=0
+10-18 16:04:03.303  1074  1074 I auditd  : type=1400 audit(0.0:59): avc: denied { search } for comm="radioext@1.0-se" name="radio" dev="dm-8" ino=237 scontext=u:r:hal_radioext_default:s0 tcontext=u:object_r:radio_vendor_data_file:s0 tclass=dir permissive=0
+10-18 16:04:06.266  2754  2754 I auditd  : type=1400 audit(0.0:61): avc: denied { read write } for comm="imsrcsd" name="diag" dev="tmpfs" ino=25725 scontext=u:r:hal_rcsservice:s0 tcontext=u:object_r:diag_device:s0 tclass=chr_file permissive=0
+10-18 16:04:10.510  3216  3216 I auditd  : type=1400 audit(0.0:62): avc: denied { read } for comm="RestartDetector" name="u:object_r:vendor_ssr_prop:s0" dev="tmpfs" ino=25611 scontext=u:r:ssr_detector_app:s0:c512,c768 tcontext=u:object_r:vendor_ssr_prop:s0 tclass=file permissive=0
+10-18 16:04:10.526  3216  3216 I auditd  : type=1400 audit(0.0:63): avc: denied { read } for comm="RestartDetector" name="u:object_r:vendor_ssr_prop:s0" dev="tmpfs" ino=25611 scontext=u:r:ssr_detector_app:s0:c512,c768 tcontext=u:object_r:vendor_ssr_prop:s0 tclass=file permissive=0
+10-18 16:04:10.526  3216  3216 I auditd  : type=1400 audit(0.0:64): avc: denied { read } for comm="RestartDetector" name="u:object_r:vendor_ssr_prop:s0" dev="tmpfs" ino=25611 scontext=u:r:ssr_detector_app:s0:c512,c768 tcontext=u:object_r:vendor_ssr_prop:s0 tclass=file permissive=0
+10-18 16:04:10.526  3216  3216 I auditd  : type=1400 audit(0.0:65): avc: denied { read } for comm="RestartDetector" name="u:object_r:vendor_ssr_prop:s0" dev="tmpfs" ino=25611 scontext=u:r:ssr_detector_app:s0:c512,c768 tcontext=u:object_r:vendor_ssr_prop:s0 tclass=file permissive=0
+10-18 16:04:10.526  3216  3216 I auditd  : type=1400 audit(0.0:66): avc: denied { read } for comm="RestartDetector" name="u:object_r:vendor_ssr_prop:s0" dev="tmpfs" ino=25611 scontext=u:r:ssr_detector_app:s0:c512,c768 tcontext=u:object_r:vendor_ssr_prop:s0 tclass=file permissive=0
+10-18 16:06:57.642  1355  7481 I adbd    : adbd restarting as root
+10-18 16:06:57.694  1651  2940 W AdbDebuggingManager: Read failed with count -1
+10-18 16:06:57.826  7482  7482 I auditd  : type=1400 audit(0.0:68): avc: denied { setcurrent } for comm="adbd" scontext=u:r:adbd:s0 tcontext=u:r:adbd:s0 tclass=process permissive=0
+10-18 16:06:57.826  7482  7482 W adbd    : type=1400 audit(0.0:68): avc: denied { setcurrent } for scontext=u:r:adbd:s0 tcontext=u:r:adbd:s0 tclass=process permissive=0
+10-18 16:06:57.828  7482  7482 F adbd    : main.cpp:161] Could not set SELinux context
+10-18 16:06:57.829  7482  7482 F libc    : Fatal signal 6 (SIGABRT), code -1 (SI_QUEUE) in tid 7482 (adbd), pid 7482 (adbd)
+10-18 16:06:57.921  7485  7485 F DEBUG   : Cmdline: /apex/com.android.adbd/bin/adbd --root_seclabel=u:r:su:s0
+10-18 16:06:57.921  7485  7485 F DEBUG   : pid: 7482, tid: 7482, name: adbd  >>> /apex/com.android.adbd/bin/adbd <<<
+10-18 16:06:57.921  7485  7485 F DEBUG   : Abort message: 'Could not set SELinux context'
+10-18 16:06:57.922  7485  7485 F DEBUG   :       #04 pc 00000000000995b8  /apex/com.android.adbd/bin/adbd (adbd_main(int)+1340) (BuildId: a5d0cdc6f34f986233469e36f678df01)
+10-18 16:06:57.922  7485  7485 F DEBUG   :       #05 pc 000000000009a2b0  /apex/com.android.adbd/bin/adbd (main+328) (BuildId: a5d0cdc6f34f986233469e36f678df01)
+10-18 16:06:58.701  1651  2940 E AdbDebuggingManager: Caught an exception opening the socket: java.io.IOException: No such file or directory
+10-18 16:07:00.704  1651  2940 E AdbDebuggingManager: Caught an exception opening the socket: java.io.IOException: No such file or directory
+10-18 16:07:02.708  1651  2940 E AdbDebuggingManager: Caught an exception opening the socket: java.io.IOException: No such file or directory
+10-18 16:07:02.773  7493  7493 I auditd  : type=1400 audit(0.0:69): avc: denied { setcurrent } for comm="adbd" scontext=u:r:adbd:s0 tcontext=u:r:adbd:s0 tclass=process permissive=0
+10-18 16:07:02.773  7493  7493 W adbd    : type=1400 audit(0.0:69): avc: denied { setcurrent } for scontext=u:r:adbd:s0 tcontext=u:r:adbd:s0 tclass=process permissive=0
+10-18 16:07:02.774  7493  7493 F adbd    : main.cpp:161] Could not set SELinux context
+10-18 16:07:02.775  7493  7493 F libc    : Fatal signal 6 (SIGABRT), code -1 (SI_QUEUE) in tid 7493 (adbd), pid 7493 (adbd)
+10-18 16:07:02.812  7496  7496 F DEBUG   : Cmdline: /apex/com.android.adbd/bin/adbd --root_seclabel=u:r:su:s0
+10-18 16:07:02.812  7496  7496 F DEBUG   : pid: 7493, tid: 7493, name: adbd  >>> /apex/com.android.adbd/bin/adbd <<<
+10-18 16:07:02.813  7496  7496 F DEBUG   : Abort message: 'Could not set SELinux context'
+10-18 16:07:02.813  7496  7496 F DEBUG   :       #04 pc 00000000000995b8  /apex/com.android.adbd/bin/adbd (adbd_main(int)+1340) (BuildId: a5d0cdc6f34f986233469e36f678df01)
+10-18 16:07:02.813  7496  7496 F DEBUG   :       #05 pc 000000000009a2b0  /apex/com.android.adbd/bin/adbd (main+328) (BuildId: a5d0cdc6f34f986233469e36f678df01)
+10-18 16:07:04.711  1651  2940 E AdbDebuggingManager: Caught an exception opening the socket: java.io.IOException: No such file or directory
+10-18 16:07:06.715  1651  2940 E AdbDebuggingManager: Caught an exception opening the socket: java.io.IOException: No such file or directory
+10-18 16:07:07.786  7501  7501 I auditd  : type=1400 audit(0.0:70): avc: denied { setcurrent } for comm="adbd" scontext=u:r:adbd:s0 tcontext=u:r:adbd:s0 tclass=process permissive=0
+10-18 16:07:07.786  7501  7501 W adbd    : type=1400 audit(0.0:70): avc: denied { setcurrent } for scontext=u:r:adbd:s0 tcontext=u:r:adbd:s0 tclass=process permissive=0
+10-18 16:07:07.791  7501  7501 F adbd    : main.cpp:161] Could not set SELinux context
+10-18 16:07:07.791  7501  7501 F libc    : Fatal signal 6 (SIGABRT), code -1 (SI_QUEUE) in tid 7501 (adbd), pid 7501 (adbd)
+10-18 16:07:07.844  7504  7504 F DEBUG   : Cmdline: /apex/com.android.adbd/bin/adbd --root_seclabel=u:r:su:s0
+10-18 16:07:07.844  7504  7504 F DEBUG   : pid: 7501, tid: 7501, name: adbd  >>> /apex/com.android.adbd/bin/adbd <<<
+10-18 16:07:07.844  7504  7504 F DEBUG   : Abort message: 'Could not set SELinux context'
+10-18 16:07:07.845  7504  7504 F DEBUG   :       #04 pc 00000000000995b8  /apex/com.android.adbd/bin/adbd (adbd_main(int)+1340) (BuildId: a5d0cdc6f34f986233469e36f678df01)
+10-18 16:07:07.845  7504  7504 F DEBUG   :       #05 pc 000000000009a2b0  /apex/com.android.adbd/bin/adbd (main+328) (BuildId: a5d0cdc6f34f986233469e36f678df01)
+10-18 16:07:08.717  1651  2940 E AdbDebuggingManager: Caught an exception opening the socket: java.io.IOException: No such file or directory
+10-18 16:07:10.718  1651  2940 E AdbDebuggingManager: Caught an exception opening the socket: java.io.IOException: No such file or directory
+10-18 16:07:12.727  1651  2940 E AdbDebuggingManager: Caught an exception opening the socket: java.io.IOException: No such file or directory
+10-18 16:07:12.756  7792  7792 I auditd  : type=1400 audit(0.0:71): avc: denied { setcurrent } for comm="adbd" scontext=u:r:adbd:s0 tcontext=u:r:adbd:s0 tclass=process permissive=0
+10-18 16:07:12.756  7792  7792 W adbd    : type=1400 audit(0.0:71): avc: denied { setcurrent } for scontext=u:r:adbd:s0 tcontext=u:r:adbd:s0 tclass=process permissive=0
+10-18 16:07:12.760  7792  7792 F adbd    : main.cpp:161] Could not set SELinux context
+10-18 16:07:12.761  7792  7792 F libc    : Fatal signal 6 (SIGABRT), code -1 (SI_QUEUE) in tid 7792 (adbd), pid 7792 (adbd)
+10-18 16:07:12.804  7812  7812 F DEBUG   : Cmdline: /apex/com.android.adbd/bin/adbd --root_seclabel=u:r:su:s0
+10-18 16:07:12.804  7812  7812 F DEBUG   : pid: 7792, tid: 7792, name: adbd  >>> /apex/com.android.adbd/bin/adbd <<<
+10-18 16:07:12.804  7812  7812 F DEBUG   : Abort message: 'Could not set SELinux context'
+10-18 16:07:12.804  7812  7812 F DEBUG   :       #04 pc 00000000000995b8  /apex/com.android.adbd/bin/adbd (adbd_main(int)+1340) (BuildId: a5d0cdc6f34f986233469e36f678df01)
+10-18 16:07:12.804  7812  7812 F DEBUG   :       #05 pc 000000000009a2b0  /apex/com.android.adbd/bin/adbd (main+328) (BuildId: a5d0cdc6f34f986233469e36f678df01)
+10-18 16:07:14.732  1651  2940 E AdbDebuggingManager: Caught an exception opening the socket: java.io.IOException: No such file or directory
+10-18 16:07:16.734  1651  2940 E AdbDebuggingManager: Caught an exception opening the socket: java.io.IOException: No such file or directory
+10-18 16:07:17.800  7840  7840 F adbd    : main.cpp:161] Could not set SELinux context
+10-18 16:07:17.800  7840  7840 F libc    : Fatal signal 6 (SIGABRT), code -1 (SI_QUEUE) in tid 7840 (adbd), pid 7840 (adbd)
+10-18 16:07:17.796  7840  7840 I auditd  : type=1400 audit(0.0:72): avc: denied { setcurrent } for comm="adbd" scontext=u:r:adbd:s0 tcontext=u:r:adbd:s0 tclass=process permissive=0
+10-18 16:07:17.796  7840  7840 W adbd    : type=1400 audit(0.0:72): avc: denied { setcurrent } for scontext=u:r:adbd:s0 tcontext=u:r:adbd:s0 tclass=process permissive=0
+10-18 16:07:17.820  7843  7843 F DEBUG   : Cmdline: /apex/com.android.adbd/bin/adbd --root_seclabel=u:r:su:s0
+10-18 16:07:17.820  7843  7843 F DEBUG   : pid: 7840, tid: 7840, name: adbd  >>> /apex/com.android.adbd/bin/adbd <<<
+10-18 16:07:17.820  7843  7843 F DEBUG   : Abort message: 'Could not set SELinux context'
+10-18 16:07:17.820  7843  7843 F DEBUG   :       #04 pc 00000000000995b8  /apex/com.android.adbd/bin/adbd (adbd_main(int)+1340) (BuildId: a5d0cdc6f34f986233469e36f678df01)
+10-18 16:07:17.820  7843  7843 F DEBUG   :       #05 pc 000000000009a2b0  /apex/com.android.adbd/bin/adbd (main+328) (BuildId: a5d0cdc6f34f986233469e36f678df01)
+10-18 16:07:18.737  1651  2940 E AdbDebuggingManager: Caught an exception opening the socket: java.io.IOException: No such file or directory
+10-18 16:07:20.738  1651  2940 E AdbDebuggingManager: Caught an exception opening the socket: java.io.IOException: No such file or directory
+10-18 16:07:22.739  1651  2940 E AdbDebuggingManager: Caught an exception opening the socket: java.io.IOException: No such file or directory
+10-18 16:07:22.786  8092  8092 I auditd  : type=1400 audit(0.0:140): avc: denied { setcurrent } for comm="adbd" scontext=u:r:adbd:s0 tcontext=u:r:adbd:s0 tclass=process permissive=0
+10-18 16:07:22.786  8092  8092 W adbd    : type=1400 audit(0.0:140): avc: denied { setcurrent } for scontext=u:r:adbd:s0 tcontext=u:r:adbd:s0 tclass=process permissive=0
+10-18 16:07:22.790  8092  8092 F adbd    : main.cpp:161] Could not set SELinux context
+10-18 16:07:22.791  8092  8092 F libc    : Fatal signal 6 (SIGABRT), code -1 (SI_QUEUE) in tid 8092 (adbd), pid 8092 (adbd)
+10-18 16:07:22.834  8095  8095 F DEBUG   : Cmdline: /apex/com.android.adbd/bin/adbd --root_seclabel=u:r:su:s0
+10-18 16:07:22.834  8095  8095 F DEBUG   : pid: 8092, tid: 8092, name: adbd  >>> /apex/com.android.adbd/bin/adbd <<<
+10-18 16:07:22.834  8095  8095 F DEBUG   : Abort message: 'Could not set SELinux context'
+10-18 16:07:22.834  8095  8095 F DEBUG   :       #04 pc 00000000000995b8  /apex/com.android.adbd/bin/adbd (adbd_main(int)+1340) (BuildId: a5d0cdc6f34f986233469e36f678df01)
+10-18 16:07:22.835  8095  8095 F DEBUG   :       #05 pc 000000000009a2b0  /apex/com.android.adbd/bin/adbd (main+328) (BuildId: a5d0cdc6f34f986233469e36f678df01)
+10-18 16:07:24.748  1651  2940 E AdbDebuggingManager: Caught an exception opening the socket: java.io.IOException: No such file or directory
+10-18 16:07:26.750  1651  2940 E AdbDebuggingManager: Caught an exception opening the socket: java.io.IOException: No such file or directory
+10-18 16:07:27.813  8140  8140 I auditd  : type=1400 audit(0.0:141): avc: denied { setcurrent } for comm="adbd" scontext=u:r:adbd:s0 tcontext=u:r:adbd:s0 tclass=process permissive=0
+10-18 16:07:27.813  8140  8140 W adbd    : type=1400 audit(0.0:141): avc: denied { setcurrent } for scontext=u:r:adbd:s0 tcontext=u:r:adbd:s0 tclass=process permissive=0
+10-18 16:07:27.816  8140  8140 F adbd    : main.cpp:161] Could not set SELinux context
+10-18 16:07:27.816  8140  8140 F libc    : Fatal signal 6 (SIGABRT), code -1 (SI_QUEUE) in tid 8140 (adbd), pid 8140 (adbd)
+10-18 16:07:27.862  8143  8143 F DEBUG   : Cmdline: /apex/com.android.adbd/bin/adbd --root_seclabel=u:r:su:s0
+10-18 16:07:27.862  8143  8143 F DEBUG   : pid: 8140, tid: 8140, name: adbd  >>> /apex/com.android.adbd/bin/adbd <<<
+10-18 16:07:27.862  8143  8143 F DEBUG   : Abort message: 'Could not set SELinux context'
+10-18 16:07:27.862  8143  8143 F DEBUG   :       #04 pc 00000000000995b8  /apex/com.android.adbd/bin/adbd (adbd_main(int)+1340) (BuildId: a5d0cdc6f34f986233469e36f678df01)
+10-18 16:07:27.862  8143  8143 F DEBUG   :       #05 pc 000000000009a2b0  /apex/com.android.adbd/bin/adbd (main+328) (BuildId: a5d0cdc6f34f986233469e36f678df01)
+10-18 16:07:28.755  1651  2940 E AdbDebuggingManager: Caught an exception opening the socket: java.io.IOException: No such file or directory
+10-18 16:07:30.762  1651  2940 E AdbDebuggingManager: Caught an exception opening the socket: java.io.IOException: No such file or directory
+10-18 16:07:32.764  1651  2940 E AdbDebuggingManager: Caught an exception opening the socket: java.io.IOException: No such file or directory
+10-18 16:07:32.793  8167  8167 I auditd  : type=1400 audit(0.0:142): avc: denied { setcurrent } for comm="adbd" scontext=u:r:adbd:s0 tcontext=u:r:adbd:s0 tclass=process permissive=0
+10-18 16:07:32.793  8167  8167 W adbd    : type=1400 audit(0.0:142): avc: denied { setcurrent } for scontext=u:r:adbd:s0 tcontext=u:r:adbd:s0 tclass=process permissive=0
+10-18 16:07:32.796  8167  8167 F adbd    : main.cpp:161] Could not set SELinux context
+10-18 16:07:32.796  8167  8167 F libc    : Fatal signal 6 (SIGABRT), code -1 (SI_QUEUE) in tid 8167 (adbd), pid 8167 (adbd)
+10-18 16:07:32.814  8170  8170 F DEBUG   : Cmdline: /apex/com.android.adbd/bin/adbd --root_seclabel=u:r:su:s0
+10-18 16:07:32.814  8170  8170 F DEBUG   : pid: 8167, tid: 8167, name: adbd  >>> /apex/com.android.adbd/bin/adbd <<<
+10-18 16:07:32.814  8170  8170 F DEBUG   : Abort message: 'Could not set SELinux context'
+10-18 16:07:32.814  8170  8170 F DEBUG   :       #04 pc 00000000000995b8  /apex/com.android.adbd/bin/adbd (adbd_main(int)+1340) (BuildId: a5d0cdc6f34f986233469e36f678df01)
+10-18 16:07:32.814  8170  8170 F DEBUG   :       #05 pc 000000000009a2b0  /apex/com.android.adbd/bin/adbd (main+328) (BuildId: a5d0cdc6f34f986233469e36f678df01)
+10-18 16:07:34.767  1651  2940 E AdbDebuggingManager: Caught an exception opening the socket: java.io.IOException: No such file or directory
+10-18 16:07:36.770  1651  2940 E AdbDebuggingManager: Caught an exception opening the socket: java.io.IOException: No such file or directory
+10-18 16:07:37.836  8344  8344 I auditd  : type=1400 audit(0.0:144): avc: denied { setcurrent } for comm="adbd" scontext=u:r:adbd:s0 tcontext=u:r:adbd:s0 tclass=process permissive=0
+10-18 16:07:37.836  8344  8344 W adbd    : type=1400 audit(0.0:144): avc: denied { setcurrent } for scontext=u:r:adbd:s0 tcontext=u:r:adbd:s0 tclass=process permissive=0
+10-18 16:07:37.838  8344  8344 F adbd    : main.cpp:161] Could not set SELinux context
+10-18 16:07:37.838  8344  8344 F libc    : Fatal signal 6 (SIGABRT), code -1 (SI_QUEUE) in tid 8344 (adbd), pid 8344 (adbd)
+10-18 16:07:37.881  8347  8347 F DEBUG   : Cmdline: /apex/com.android.adbd/bin/adbd --root_seclabel=u:r:su:s0
+10-18 16:07:37.881  8347  8347 F DEBUG   : pid: 8344, tid: 8344, name: adbd  >>> /apex/com.android.adbd/bin/adbd <<<
+10-18 16:07:37.881  8347  8347 F DEBUG   : Abort message: 'Could not set SELinux context'
+10-18 16:07:37.882  8347  8347 F DEBUG   :       #04 pc 00000000000995b8  /apex/com.android.adbd/bin/adbd (adbd_main(int)+1340) (BuildId: a5d0cdc6f34f986233469e36f678df01)
+10-18 16:07:37.882  8347  8347 F DEBUG   :       #05 pc 000000000009a2b0  /apex/com.android.adbd/bin/adbd (main+328) (BuildId: a5d0cdc6f34f986233469e36f678df01)
+10-18 16:07:38.772  1651  2940 E AdbDebuggingManager: Caught an exception opening the socket: java.io.IOException: No such file or directory
+10-18 16:07:40.775  1651  2940 E AdbDebuggingManager: Caught an exception opening the socket: java.io.IOException: No such file or directory
+10-18 16:07:42.778  1651  2940 E AdbDebuggingManager: Caught an exception opening the socket: java.io.IOException: No such file or directory
+10-18 16:07:42.833  8383  8383 I auditd  : type=1400 audit(0.0:145): avc: denied { setcurrent } for comm="adbd" scontext=u:r:adbd:s0 tcontext=u:r:adbd:s0 tclass=process permissive=0
+10-18 16:07:42.833  8383  8383 W adbd    : type=1400 audit(0.0:145): avc: denied { setcurrent } for scontext=u:r:adbd:s0 tcontext=u:r:adbd:s0 tclass=process permissive=0
+10-18 16:07:42.834  8383  8383 F adbd    : main.cpp:161] Could not set SELinux context
+10-18 16:07:42.835  8383  8383 F libc    : Fatal signal 6 (SIGABRT), code -1 (SI_QUEUE) in tid 8383 (adbd), pid 8383 (adbd)
+10-18 16:07:42.872  8386  8386 F DEBUG   : Cmdline: /apex/com.android.adbd/bin/adbd --root_seclabel=u:r:su:s0
+10-18 16:07:42.872  8386  8386 F DEBUG   : pid: 8383, tid: 8383, name: adbd  >>> /apex/com.android.adbd/bin/adbd <<<
+10-18 16:07:42.872  8386  8386 F DEBUG   : Abort message: 'Could not set SELinux context'
+10-18 16:07:42.872  8386  8386 F DEBUG   :       #04 pc 00000000000995b8  /apex/com.android.adbd/bin/adbd (adbd_main(int)+1340) (BuildId: a5d0cdc6f34f986233469e36f678df01)
+10-18 16:07:42.872  8386  8386 F DEBUG   :       #05 pc 000000000009a2b0  /apex/com.android.adbd/bin/adbd (main+328) (BuildId: a5d0cdc6f34f986233469e36f678df01)
+10-18 16:07:44.780  1651  2940 E AdbDebuggingManager: Caught an exception opening the socket: java.io.IOException: No such file or directory
+10-18 16:07:46.785  1651  2940 E AdbDebuggingManager: Caught an exception opening the socket: java.io.IOException: No such file or directory
+10-18 16:07:47.846  8400  8400 I auditd  : type=1400 audit(0.0:146): avc: denied { setcurrent } for comm="adbd" scontext=u:r:adbd:s0 tcontext=u:r:adbd:s0 tclass=process permissive=0
+10-18 16:07:47.846  8400  8400 W adbd    : type=1400 audit(0.0:146): avc: denied { setcurrent } for scontext=u:r:adbd:s0 tcontext=u:r:adbd:s0 tclass=process permissive=0
+10-18 16:07:47.850  8400  8400 F adbd    : main.cpp:161] Could not set SELinux context
+10-18 16:07:47.851  8400  8400 F libc    : Fatal signal 6 (SIGABRT), code -1 (SI_QUEUE) in tid 8400 (adbd), pid 8400 (adbd)
+10-18 16:07:47.909  8403  8403 F DEBUG   : Cmdline: /apex/com.android.adbd/bin/adbd --root_seclabel=u:r:su:s0
+10-18 16:07:47.909  8403  8403 F DEBUG   : pid: 8400, tid: 8400, name: adbd  >>> /apex/com.android.adbd/bin/adbd <<<
+10-18 16:07:47.910  8403  8403 F DEBUG   : Abort message: 'Could not set SELinux context'
+10-18 16:07:47.910  8403  8403 F DEBUG   :       #04 pc 00000000000995b8  /apex/com.android.adbd/bin/adbd (adbd_main(int)+1340) (BuildId: a5d0cdc6f34f986233469e36f678df01)
+10-18 16:07:47.910  8403  8403 F DEBUG   :       #05 pc 000000000009a2b0  /apex/com.android.adbd/bin/adbd (main+328) (BuildId: a5d0cdc6f34f986233469e36f678df01)
+10-18 16:07:48.791  1651  2940 E AdbDebuggingManager: Caught an exception opening the socket: java.io.IOException: No such file or directory
+10-18 16:07:50.795  1651  2940 E AdbDebuggingManager: Caught an exception opening the socket: java.io.IOException: No such file or directory
+10-18 16:07:52.800  1651  2940 E AdbDebuggingManager: Caught an exception opening the socket: java.io.IOException: No such file or directory
+10-18 16:07:52.873  8410  8410 I auditd  : type=1400 audit(0.0:147): avc: denied { setcurrent } for comm="adbd" scontext=u:r:adbd:s0 tcontext=u:r:adbd:s0 tclass=process permissive=0
+10-18 16:07:52.873  8410  8410 W adbd    : type=1400 audit(0.0:147): avc: denied { setcurrent } for scontext=u:r:adbd:s0 tcontext=u:r:adbd:s0 tclass=process permissive=0
+10-18 16:07:52.876  8410  8410 F adbd    : main.cpp:161] Could not set SELinux context
+10-18 16:07:52.876  8410  8410 F libc    : Fatal signal 6 (SIGABRT), code -1 (SI_QUEUE) in tid 8410 (adbd), pid 8410 (adbd)
+10-18 16:07:52.921  8413  8413 F DEBUG   : Cmdline: /apex/com.android.adbd/bin/adbd --root_seclabel=u:r:su:s0
+10-18 16:07:52.922  8413  8413 F DEBUG   : pid: 8410, tid: 8410, name: adbd  >>> /apex/com.android.adbd/bin/adbd <<<
+10-18 16:07:52.922  8413  8413 F DEBUG   : Abort message: 'Could not set SELinux context'
+10-18 16:07:52.922  8413  8413 F DEBUG   :       #04 pc 00000000000995b8  /apex/com.android.adbd/bin/adbd (adbd_main(int)+1340) (BuildId: a5d0cdc6f34f986233469e36f678df01)
+10-18 16:07:52.922  8413  8413 F DEBUG   :       #05 pc 000000000009a2b0  /apex/com.android.adbd/bin/adbd (main+328) (BuildId: a5d0cdc6f34f986233469e36f678df01)
+10-18 16:07:54.805  1651  2940 E AdbDebuggingManager: Caught an exception opening the socket: java.io.IOException: No such file or directory
+10-18 16:07:56.809  1651  2940 E AdbDebuggingManager: Caught an exception opening the socket: java.io.IOException: No such file or directory
+10-18 16:07:57.873  8532  8532 I auditd  : type=1400 audit(0.0:148): avc: denied { setcurrent } for comm="adbd" scontext=u:r:adbd:s0 tcontext=u:r:adbd:s0 tclass=process permissive=0
+10-18 16:07:57.873  8532  8532 W adbd    : type=1400 audit(0.0:148): avc: denied { setcurrent } for scontext=u:r:adbd:s0 tcontext=u:r:adbd:s0 tclass=process permissive=0
+10-18 16:07:57.877  8532  8532 F adbd    : main.cpp:161] Could not set SELinux context
+10-18 16:07:57.878  8532  8532 F libc    : Fatal signal 6 (SIGABRT), code -1 (SI_QUEUE) in tid 8532 (adbd), pid 8532 (adbd)
+10-18 16:07:57.919  8535  8535 F DEBUG   : Cmdline: /apex/com.android.adbd/bin/adbd --root_seclabel=u:r:su:s0
+10-18 16:07:57.919  8535  8535 F DEBUG   : pid: 8532, tid: 8532, name: adbd  >>> /apex/com.android.adbd/bin/adbd <<<
+10-18 16:07:57.919  8535  8535 F DEBUG   : Abort message: 'Could not set SELinux context'
+10-18 16:07:57.919  8535  8535 F DEBUG   :       #04 pc 00000000000995b8  /apex/com.android.adbd/bin/adbd (adbd_main(int)+1340) (BuildId: a5d0cdc6f34f986233469e36f678df01)
+10-18 16:07:57.919  8535  8535 F DEBUG   :       #05 pc 000000000009a2b0  /apex/com.android.adbd/bin/adbd (main+328) (BuildId: a5d0cdc6f34f986233469e36f678df01)
+10-18 16:07:58.811  1651  2940 E AdbDebuggingManager: Caught an exception opening the socket: java.io.IOException: No such file or directory
+10-18 16:08:00.813  1651  2940 E AdbDebuggingManager: Caught an exception opening the socket: java.io.IOException: No such file or directory
+10-18 16:08:02.817  1651  2940 E AdbDebuggingManager: Caught an exception opening the socket: java.io.IOException: No such file or directory
+10-18 16:08:02.883  8566  8566 I auditd  : type=1400 audit(0.0:149): avc: denied { setcurrent } for comm="adbd" scontext=u:r:adbd:s0 tcontext=u:r:adbd:s0 tclass=process permissive=0
+10-18 16:08:02.883  8566  8566 W adbd    : type=1400 audit(0.0:149): avc: denied { setcurrent } for scontext=u:r:adbd:s0 tcontext=u:r:adbd:s0 tclass=process permissive=0
+10-18 16:08:02.886  8566  8566 F adbd    : main.cpp:161] Could not set SELinux context
+10-18 16:08:02.886  8566  8566 F libc    : Fatal signal 6 (SIGABRT), code -1 (SI_QUEUE) in tid 8566 (adbd), pid 8566 (adbd)
+10-18 16:08:02.928  8569  8569 F DEBUG   : Cmdline: /apex/com.android.adbd/bin/adbd --root_seclabel=u:r:su:s0
+10-18 16:08:02.928  8569  8569 F DEBUG   : pid: 8566, tid: 8566, name: adbd  >>> /apex/com.android.adbd/bin/adbd <<<
+10-18 16:08:02.928  8569  8569 F DEBUG   : Abort message: 'Could not set SELinux context'
+10-18 16:08:02.928  8569  8569 F DEBUG   :       #04 pc 00000000000995b8  /apex/com.android.adbd/bin/adbd (adbd_main(int)+1340) (BuildId: a5d0cdc6f34f986233469e36f678df01)
+10-18 16:08:02.928  8569  8569 F DEBUG   :       #05 pc 000000000009a2b0  /apex/com.android.adbd/bin/adbd (main+328) (BuildId: a5d0cdc6f34f986233469e36f678df01)
+10-18 16:08:04.818  1651  2940 E AdbDebuggingManager: Caught an exception opening the socket: java.io.IOException: No such file or directory
+10-18 16:08:06.821  1651  2940 E AdbDebuggingManager: Caught an exception opening the socket: java.io.IOException: No such file or directory
+10-18 16:08:07.900  8591  8591 I auditd  : type=1400 audit(0.0:150): avc: denied { setcurrent } for comm="adbd" scontext=u:r:adbd:s0 tcontext=u:r:adbd:s0 tclass=process permissive=0
+10-18 16:08:07.900  8591  8591 W adbd    : type=1400 audit(0.0:150): avc: denied { setcurrent } for scontext=u:r:adbd:s0 tcontext=u:r:adbd:s0 tclass=process permissive=0
+10-18 16:08:07.904  8591  8591 F adbd    : main.cpp:161] Could not set SELinux context
+10-18 16:08:07.904  8591  8591 F libc    : Fatal signal 6 (SIGABRT), code -1 (SI_QUEUE) in tid 8591 (adbd), pid 8591 (adbd)
+10-18 16:08:07.951  8594  8594 F DEBUG   : Cmdline: /apex/com.android.adbd/bin/adbd --root_seclabel=u:r:su:s0
+10-18 16:08:07.951  8594  8594 F DEBUG   : pid: 8591, tid: 8591, name: adbd  >>> /apex/com.android.adbd/bin/adbd <<<
+10-18 16:08:07.951  8594  8594 F DEBUG   : Abort message: 'Could not set SELinux context'
+10-18 16:08:07.951  8594  8594 F DEBUG   :       #04 pc 00000000000995b8  /apex/com.android.adbd/bin/adbd (adbd_main(int)+1340) (BuildId: a5d0cdc6f34f986233469e36f678df01)
+10-18 16:08:07.951  8594  8594 F DEBUG   :       #05 pc 000000000009a2b0  /apex/com.android.adbd/bin/adbd (main+328) (BuildId: a5d0cdc6f34f986233469e36f678df01)
+10-18 16:08:08.829  1651  2940 E AdbDebuggingManager: Caught an exception opening the socket: java.io.IOException: No such file or directory
