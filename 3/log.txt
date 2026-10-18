@@ -1,0 +1,269 @@
+
++ echo '=== adbd process ==='
+=== adbd process ===
++ ps -A -o PID,PPID,USER,NAME,ARGS
++ grep '[a]dbd'
++ echo '=== adbd service ==='
+=== adbd service ===
++ getprop init.svc.adbd
+restarting
++ getprop init.svc_debug_pid.adbd
+10632
++ echo '=== USB properties ==='
+=== USB properties ===
++ getprop sys.usb.config
+adb
++ getprop sys.usb.state
+
++ getprop sys.usb.configfs
+2
++ getprop persist.sys.usb.config
+adb
++ echo '=== ADB properties ==='
+=== ADB properties ===
++ getprop ro.adb.secure
+1
++ getprop ro.build.type
+user
++ getprop ro.build.tags
+release-keys
++ getprop service.adb.root
+
++ getprop persist.adb.tcp.port
+
++ getprop service.adb.tcp.port
+
++ echo '=== TCP listeners ==='
+=== TCP listeners ===
++ 2>&1 
++ ss -lnt
++ grep -E '5555|LISTEN'
+LISTEN      0      128    0.0.0.0:50028              0.0.0.0:*                  
+LISTEN      0      128    0.0.0.0:50029              0.0.0.0:*                  
+LISTEN      0      128    0.0.0.0:50030              0.0.0.0:*                  
+LISTEN      0      128    0.0.0.0:50031              0.0.0.0:*                  
+LISTEN      0      128    0.0.0.0:43759              0.0.0.0:*                  
+LISTEN      0      128    0.0.0.0:43411              0.0.0.0:*                  
+LISTEN      0      128    0.0.0.0:41332              0.0.0.0:*                  
+LISTEN      0      128    0.0.0.0:41333              0.0.0.0:*                  
+LISTEN      0      128    0.0.0.0:50040              0.0.0.0:*                  
+LISTEN      0      128    0.0.0.0:50041              0.0.0.0:*                  
+LISTEN      0      128    0.0.0.0:42361              0.0.0.0:*                  
+LISTEN      0      128    0.0.0.0:41754              0.0.0.0:*                  
+LISTEN      0      128    0.0.0.0:50012              0.0.0.0:*                  
+LISTEN      0      128    0.0.0.0:50013              0.0.0.0:*                  
+LISTEN      0      128    0.0.0.0:42077              0.0.0.0:*                  
+LISTEN      0      128    0.0.0.0:50014              0.0.0.0:*                  
+LISTEN      0      128    0.0.0.0:50015              0.0.0.0:*                  
+LISTEN      0      128    0.0.0.0:44927              0.0.0.0:*                  
+LISTEN      0      128    0.0.0.0:40319              0.0.0.0:*                  
+LISTEN      0      128    0.0.0.0:50048              0.0.0.0:*                  
+LISTEN      0      128    0.0.0.0:50049              0.0.0.0:*                  
+LISTEN      0      128    0.0.0.0:40835              0.0.0.0:*                  
+LISTEN      0      128    0.0.0.0:50052              0.0.0.0:*                  
+LISTEN      0      128    0.0.0.0:50020              0.0.0.0:*                  
+LISTEN      0      128    0.0.0.0:50053              0.0.0.0:*                  
+LISTEN      0      128    0.0.0.0:50021              0.0.0.0:*                  
+LISTEN      0      128    0.0.0.0:50022              0.0.0.0:*                  
+LISTEN      0      128    0.0.0.0:43430              0.0.0.0:*                  
+LISTEN      0      128    0.0.0.0:50023              0.0.0.0:*                  
+LISTEN      0      128    0.0.0.0:42023              0.0.0.0:*                  
+LISTEN      0      128    0.0.0.0:50056              0.0.0.0:*                  
+LISTEN      0      128    0.0.0.0:50057              0.0.0.0:*                  
+LISTEN      0      128    0.0.0.0:50026              0.0.0.0:*                  
+LISTEN      0      128    0.0.0.0:50058              0.0.0.0:*                  
+LISTEN      0      128    0.0.0.0:50027              0.0.0.0:*                  
+LISTEN      0      128    0.0.0.0:50059              0.0.0.0:*                  
+LISTEN      0      128       [::]:50030                 [::]:*                  
+LISTEN      0      128       [::]:41646                 [::]:*                  
+LISTEN      0      128       [::]:50031                 [::]:*                  
+LISTEN      0      128       [::]:50032                 [::]:*                  
+LISTEN      0      128       [::]:50033                 [::]:*                  
+LISTEN      0      128       [::]:41586                 [::]:*                  
+LISTEN      0      128       [::]:43411                 [::]:*                  
+LISTEN      0      128       [::]:50036                 [::]:*                  
+LISTEN      0      128       [::]:50037                 [::]:*                  
+LISTEN      0      128       [::]:44277                 [::]:*                  
+LISTEN      0      128       [::]:50040                 [::]:*                  
+LISTEN      0      128       [::]:41304                 [::]:*                  
+LISTEN      0      128       [::]:50041                 [::]:*                  
+LISTEN      0      128       [::]:42361                 [::]:*                  
+LISTEN      0      128       [::]:42265                 [::]:*                  
+LISTEN      0      128       [::]:50042                 [::]:*                  
+LISTEN      0      128       [::]:50043                 [::]:*                  
+LISTEN      0      128       [::]:42077                 [::]:*                  
+LISTEN      0      128       [::]:44927                 [::]:*                  
+LISTEN      0      128       [::]:41663                 [::]:*                  
+LISTEN      0      128       [::]:44287                 [::]:*                  
+LISTEN      0      128       [::]:50016                 [::]:*                  
+LISTEN      0      128       [::]:50017                 [::]:*                  
+LISTEN      0      128       [::]:50018                 [::]:*                  
+LISTEN      0      128       [::]:42402                 [::]:*                  
+LISTEN      0      128       [::]:50019                 [::]:*                  
+LISTEN      0      128       [::]:50052                 [::]:*                  
+LISTEN      0      128       [::]:50020                 [::]:*                  
+LISTEN      0      128       [::]:50053                 [::]:*                  
+LISTEN      0      128       [::]:50021                 [::]:*                  
+LISTEN      0      128       [::]:50022                 [::]:*                  
+LISTEN      0      128       [::]:50023                 [::]:*                  
+LISTEN      0      128       [::]:50056                 [::]:*                  
+LISTEN      0      128       [::]:50057                 [::]:*                  
+LISTEN      0      128       [::]:50058                 [::]:*                  
+LISTEN      0      50      [::ffff:127.0.0.1]:37067                    *:*                  
+LISTEN      0      128       [::]:50059                 [::]:*                  
++ echo '=== recent adbd errors ==='
+=== recent adbd errors ===
++ 2>/dev/null 
++ logcat -b all -d -t 3000
++ grep -iE 'adbd|init.*service|avc: denied|usb gadget|configfs'
++ tail -n 150
+10-18 14:57:00.443  1629  2805 E AdbDebuggingManager: Caught an exception opening the socket: java.io.IOException: No such file or directory
+10-18 14:57:02.447  1629  2805 E AdbDebuggingManager: Caught an exception opening the socket: java.io.IOException: No such file or directory
+10-18 14:57:04.452  1629  2805 E AdbDebuggingManager: Caught an exception opening the socket: java.io.IOException: No such file or directory
+10-18 14:57:05.096 10449 10449 I auditd  : type=1400 audit(0.0:346): avc: denied { setcurrent } for comm="adbd" scontext=u:r:adbd:s0 tcontext=u:r:adbd:s0 tclass=process permissive=0
+10-18 14:57:05.096 10449 10449 W adbd    : type=1400 audit(0.0:346): avc: denied { setcurrent } for scontext=u:r:adbd:s0 tcontext=u:r:adbd:s0 tclass=process permissive=0
+10-18 14:57:05.097 10449 10449 F adbd    : main.cpp:161] Could not set SELinux context
+10-18 14:57:05.098 10449 10449 F libc    : Fatal signal 6 (SIGABRT), code -1 (SI_QUEUE) in tid 10449 (adbd), pid 10449 (adbd)
+10-18 14:57:05.168 10452 10452 F DEBUG   : Cmdline: /apex/com.android.adbd/bin/adbd --root_seclabel=u:r:su:s0
+10-18 14:57:05.168 10452 10452 F DEBUG   : pid: 10449, tid: 10449, name: adbd  >>> /apex/com.android.adbd/bin/adbd <<<
+10-18 14:57:05.168 10452 10452 F DEBUG   :       #04 pc 00000000000995b8  /apex/com.android.adbd/bin/adbd (adbd_main(int)+1340) (BuildId: a5d0cdc6f34f986233469e36f678df01)
+10-18 14:57:05.168 10452 10452 F DEBUG   :       #05 pc 000000000009a2b0  /apex/com.android.adbd/bin/adbd (main+328) (BuildId: a5d0cdc6f34f986233469e36f678df01)
+10-18 14:57:06.459  1629  2805 E AdbDebuggingManager: Caught an exception opening the socket: java.io.IOException: No such file or directory
+10-18 14:57:08.464  1629  2805 E AdbDebuggingManager: Caught an exception opening the socket: java.io.IOException: No such file or directory
+10-18 14:57:10.113 10459 10459 I auditd  : type=1400 audit(0.0:347): avc: denied { setcurrent } for comm="adbd" scontext=u:r:adbd:s0 tcontext=u:r:adbd:s0 tclass=process permissive=0
+10-18 14:57:10.113 10459 10459 W adbd    : type=1400 audit(0.0:347): avc: denied { setcurrent } for scontext=u:r:adbd:s0 tcontext=u:r:adbd:s0 tclass=process permissive=0
+10-18 14:57:10.115 10459 10459 F adbd    : main.cpp:161] Could not set SELinux context
+10-18 14:57:10.116 10459 10459 F libc    : Fatal signal 6 (SIGABRT), code -1 (SI_QUEUE) in tid 10459 (adbd), pid 10459 (adbd)
+10-18 14:57:10.199 10462 10462 F DEBUG   : Cmdline: /apex/com.android.adbd/bin/adbd --root_seclabel=u:r:su:s0
+10-18 14:57:10.200 10462 10462 F DEBUG   : pid: 10459, tid: 10459, name: adbd  >>> /apex/com.android.adbd/bin/adbd <<<
+10-18 14:57:10.200 10462 10462 F DEBUG   :       #04 pc 00000000000995b8  /apex/com.android.adbd/bin/adbd (adbd_main(int)+1340) (BuildId: a5d0cdc6f34f986233469e36f678df01)
+10-18 14:57:10.200 10462 10462 F DEBUG   :       #05 pc 000000000009a2b0  /apex/com.android.adbd/bin/adbd (main+328) (BuildId: a5d0cdc6f34f986233469e36f678df01)
+10-18 14:57:10.471  1629  2805 E AdbDebuggingManager: Caught an exception opening the socket: java.io.IOException: No such file or directory
+10-18 14:57:12.477  1629  2805 E AdbDebuggingManager: Caught an exception opening the socket: java.io.IOException: No such file or directory
+10-18 14:57:14.492  1629  2805 E AdbDebuggingManager: Caught an exception opening the socket: java.io.IOException: No such file or directory
+10-18 14:57:15.130 10468 10468 I auditd  : type=1400 audit(0.0:348): avc: denied { setcurrent } for comm="adbd" scontext=u:r:adbd:s0 tcontext=u:r:adbd:s0 tclass=process permissive=0
+10-18 14:57:15.130 10468 10468 W adbd    : type=1400 audit(0.0:348): avc: denied { setcurrent } for scontext=u:r:adbd:s0 tcontext=u:r:adbd:s0 tclass=process permissive=0
+10-18 14:57:15.134 10468 10468 F adbd    : main.cpp:161] Could not set SELinux context
+10-18 14:57:15.135 10468 10468 F libc    : Fatal signal 6 (SIGABRT), code -1 (SI_QUEUE) in tid 10468 (adbd), pid 10468 (adbd)
+10-18 14:57:15.225 10471 10471 F DEBUG   : Cmdline: /apex/com.android.adbd/bin/adbd --root_seclabel=u:r:su:s0
+10-18 14:57:15.225 10471 10471 F DEBUG   : pid: 10468, tid: 10468, name: adbd  >>> /apex/com.android.adbd/bin/adbd <<<
+10-18 14:57:15.225 10471 10471 F DEBUG   :       #04 pc 00000000000995b8  /apex/com.android.adbd/bin/adbd (adbd_main(int)+1340) (BuildId: a5d0cdc6f34f986233469e36f678df01)
+10-18 14:57:15.225 10471 10471 F DEBUG   :       #05 pc 000000000009a2b0  /apex/com.android.adbd/bin/adbd (main+328) (BuildId: a5d0cdc6f34f986233469e36f678df01)
+10-18 14:57:16.499  1629  2805 E AdbDebuggingManager: Caught an exception opening the socket: java.io.IOException: No such file or directory
+10-18 14:57:18.503  1629  2805 E AdbDebuggingManager: Caught an exception opening the socket: java.io.IOException: No such file or directory
+10-18 14:57:20.140 10476 10476 I auditd  : type=1400 audit(0.0:349): avc: denied { setcurrent } for comm="adbd" scontext=u:r:adbd:s0 tcontext=u:r:adbd:s0 tclass=process permissive=0
+10-18 14:57:20.140 10476 10476 W adbd    : type=1400 audit(0.0:349): avc: denied { setcurrent } for scontext=u:r:adbd:s0 tcontext=u:r:adbd:s0 tclass=process permissive=0
+10-18 14:57:20.142 10476 10476 F adbd    : main.cpp:161] Could not set SELinux context
+10-18 14:57:20.142 10476 10476 F libc    : Fatal signal 6 (SIGABRT), code -1 (SI_QUEUE) in tid 10476 (adbd), pid 10476 (adbd)
+10-18 14:57:20.215 10479 10479 F DEBUG   : Cmdline: /apex/com.android.adbd/bin/adbd --root_seclabel=u:r:su:s0
+10-18 14:57:20.215 10479 10479 F DEBUG   : pid: 10476, tid: 10476, name: adbd  >>> /apex/com.android.adbd/bin/adbd <<<
+10-18 14:57:20.216 10479 10479 F DEBUG   :       #04 pc 00000000000995b8  /apex/com.android.adbd/bin/adbd (adbd_main(int)+1340) (BuildId: a5d0cdc6f34f986233469e36f678df01)
+10-18 14:57:20.216 10479 10479 F DEBUG   :       #05 pc 000000000009a2b0  /apex/com.android.adbd/bin/adbd (main+328) (BuildId: a5d0cdc6f34f986233469e36f678df01)
+10-18 14:57:20.511  1629  2805 E AdbDebuggingManager: Caught an exception opening the socket: java.io.IOException: No such file or directory
+10-18 14:57:22.515  1629  2805 E AdbDebuggingManager: Caught an exception opening the socket: java.io.IOException: No such file or directory
+10-18 14:57:24.529  1629  2805 E AdbDebuggingManager: Caught an exception opening the socket: java.io.IOException: No such file or directory
+10-18 14:57:25.166 10486 10486 I auditd  : type=1400 audit(0.0:350): avc: denied { setcurrent } for comm="adbd" scontext=u:r:adbd:s0 tcontext=u:r:adbd:s0 tclass=process permissive=0
+10-18 14:57:25.166 10486 10486 W adbd    : type=1400 audit(0.0:350): avc: denied { setcurrent } for scontext=u:r:adbd:s0 tcontext=u:r:adbd:s0 tclass=process permissive=0
+10-18 14:57:25.171 10486 10486 F adbd    : main.cpp:161] Could not set SELinux context
+10-18 14:57:25.171 10486 10486 F libc    : Fatal signal 6 (SIGABRT), code -1 (SI_QUEUE) in tid 10486 (adbd), pid 10486 (adbd)
+10-18 14:57:25.265 10489 10489 F DEBUG   : Cmdline: /apex/com.android.adbd/bin/adbd --root_seclabel=u:r:su:s0
+10-18 14:57:25.265 10489 10489 F DEBUG   : pid: 10486, tid: 10486, name: adbd  >>> /apex/com.android.adbd/bin/adbd <<<
+10-18 14:57:25.265 10489 10489 F DEBUG   :       #04 pc 00000000000995b8  /apex/com.android.adbd/bin/adbd (adbd_main(int)+1340) (BuildId: a5d0cdc6f34f986233469e36f678df01)
+10-18 14:57:25.265 10489 10489 F DEBUG   :       #05 pc 000000000009a2b0  /apex/com.android.adbd/bin/adbd (main+328) (BuildId: a5d0cdc6f34f986233469e36f678df01)
+10-18 14:57:26.546  1629  2805 E AdbDebuggingManager: Caught an exception opening the socket: java.io.IOException: No such file or directory
+10-18 14:57:28.562  1629  2805 E AdbDebuggingManager: Caught an exception opening the socket: java.io.IOException: No such file or directory
+10-18 14:57:30.136 10495 10495 I auditd  : type=1400 audit(0.0:351): avc: denied { setcurrent } for comm="adbd" scontext=u:r:adbd:s0 tcontext=u:r:adbd:s0 tclass=process permissive=0
+10-18 14:57:30.136 10495 10495 W adbd    : type=1400 audit(0.0:351): avc: denied { setcurrent } for scontext=u:r:adbd:s0 tcontext=u:r:adbd:s0 tclass=process permissive=0
+10-18 14:57:30.138 10495 10495 F adbd    : main.cpp:161] Could not set SELinux context
+10-18 14:57:30.138 10495 10495 F libc    : Fatal signal 6 (SIGABRT), code -1 (SI_QUEUE) in tid 10495 (adbd), pid 10495 (adbd)
+10-18 14:57:30.183 10498 10498 F DEBUG   : Cmdline: /apex/com.android.adbd/bin/adbd --root_seclabel=u:r:su:s0
+10-18 14:57:30.183 10498 10498 F DEBUG   : pid: 10495, tid: 10495, name: adbd  >>> /apex/com.android.adbd/bin/adbd <<<
+10-18 14:57:30.183 10498 10498 F DEBUG   :       #04 pc 00000000000995b8  /apex/com.android.adbd/bin/adbd (adbd_main(int)+1340) (BuildId: a5d0cdc6f34f986233469e36f678df01)
+10-18 14:57:30.183 10498 10498 F DEBUG   :       #05 pc 000000000009a2b0  /apex/com.android.adbd/bin/adbd (main+328) (BuildId: a5d0cdc6f34f986233469e36f678df01)
+10-18 14:57:30.566  1629  2805 E AdbDebuggingManager: Caught an exception opening the socket: java.io.IOException: No such file or directory
+10-18 14:57:32.568  1629  2805 E AdbDebuggingManager: Caught an exception opening the socket: java.io.IOException: No such file or directory
+10-18 14:57:34.570  1629  2805 E AdbDebuggingManager: Caught an exception opening the socket: java.io.IOException: No such file or directory
+10-18 14:57:35.170 10526 10526 I auditd  : type=1400 audit(0.0:352): avc: denied { setcurrent } for comm="adbd" scontext=u:r:adbd:s0 tcontext=u:r:adbd:s0 tclass=process permissive=0
+10-18 14:57:35.170 10526 10526 W adbd    : type=1400 audit(0.0:352): avc: denied { setcurrent } for scontext=u:r:adbd:s0 tcontext=u:r:adbd:s0 tclass=process permissive=0
+10-18 14:57:35.171 10526 10526 F adbd    : main.cpp:161] Could not set SELinux context
+10-18 14:57:35.171 10526 10526 F libc    : Fatal signal 6 (SIGABRT), code -1 (SI_QUEUE) in tid 10526 (adbd), pid 10526 (adbd)
+10-18 14:57:35.244 10529 10529 F DEBUG   : Cmdline: /apex/com.android.adbd/bin/adbd --root_seclabel=u:r:su:s0
+10-18 14:57:35.244 10529 10529 F DEBUG   : pid: 10526, tid: 10526, name: adbd  >>> /apex/com.android.adbd/bin/adbd <<<
+10-18 14:57:35.245 10529 10529 F DEBUG   :       #04 pc 00000000000995b8  /apex/com.android.adbd/bin/adbd (adbd_main(int)+1340) (BuildId: a5d0cdc6f34f986233469e36f678df01)
+10-18 14:57:35.245 10529 10529 F DEBUG   :       #05 pc 000000000009a2b0  /apex/com.android.adbd/bin/adbd (main+328) (BuildId: a5d0cdc6f34f986233469e36f678df01)
+10-18 14:57:36.572  1629  2805 E AdbDebuggingManager: Caught an exception opening the socket: java.io.IOException: No such file or directory
+10-18 14:57:38.575  1629  2805 E AdbDebuggingManager: Caught an exception opening the socket: java.io.IOException: No such file or directory
+10-18 14:57:40.173 10548 10548 I auditd  : type=1400 audit(0.0:353): avc: denied { setcurrent } for comm="adbd" scontext=u:r:adbd:s0 tcontext=u:r:adbd:s0 tclass=process permissive=0
+10-18 14:57:40.173 10548 10548 W adbd    : type=1400 audit(0.0:353): avc: denied { setcurrent } for scontext=u:r:adbd:s0 tcontext=u:r:adbd:s0 tclass=process permissive=0
+10-18 14:57:40.175 10548 10548 F adbd    : main.cpp:161] Could not set SELinux context
+10-18 14:57:40.176 10548 10548 F libc    : Fatal signal 6 (SIGABRT), code -1 (SI_QUEUE) in tid 10548 (adbd), pid 10548 (adbd)
+10-18 14:57:40.258 10551 10551 F DEBUG   : Cmdline: /apex/com.android.adbd/bin/adbd --root_seclabel=u:r:su:s0
+10-18 14:57:40.258 10551 10551 F DEBUG   : pid: 10548, tid: 10548, name: adbd  >>> /apex/com.android.adbd/bin/adbd <<<
+10-18 14:57:40.259 10551 10551 F DEBUG   :       #04 pc 00000000000995b8  /apex/com.android.adbd/bin/adbd (adbd_main(int)+1340) (BuildId: a5d0cdc6f34f986233469e36f678df01)
+10-18 14:57:40.259 10551 10551 F DEBUG   :       #05 pc 000000000009a2b0  /apex/com.android.adbd/bin/adbd (main+328) (BuildId: a5d0cdc6f34f986233469e36f678df01)
+10-18 14:57:40.577  1629  2805 E AdbDebuggingManager: Caught an exception opening the socket: java.io.IOException: No such file or directory
+10-18 14:57:42.581  1629  2805 E AdbDebuggingManager: Caught an exception opening the socket: java.io.IOException: No such file or directory
+10-18 14:57:44.583  1629  2805 E AdbDebuggingManager: Caught an exception opening the socket: java.io.IOException: No such file or directory
+10-18 14:57:45.210 10563 10563 I auditd  : type=1400 audit(0.0:354): avc: denied { setcurrent } for comm="adbd" scontext=u:r:adbd:s0 tcontext=u:r:adbd:s0 tclass=process permissive=0
+10-18 14:57:45.210 10563 10563 W adbd    : type=1400 audit(0.0:354): avc: denied { setcurrent } for scontext=u:r:adbd:s0 tcontext=u:r:adbd:s0 tclass=process permissive=0
+10-18 14:57:45.214 10563 10563 F adbd    : main.cpp:161] Could not set SELinux context
+10-18 14:57:45.215 10563 10563 F libc    : Fatal signal 6 (SIGABRT), code -1 (SI_QUEUE) in tid 10563 (adbd), pid 10563 (adbd)
+10-18 14:57:45.297 10566 10566 F DEBUG   : Cmdline: /apex/com.android.adbd/bin/adbd --root_seclabel=u:r:su:s0
+10-18 14:57:45.298 10566 10566 F DEBUG   : pid: 10563, tid: 10563, name: adbd  >>> /apex/com.android.adbd/bin/adbd <<<
+10-18 14:57:45.298 10566 10566 F DEBUG   :       #04 pc 00000000000995b8  /apex/com.android.adbd/bin/adbd (adbd_main(int)+1340) (BuildId: a5d0cdc6f34f986233469e36f678df01)
+10-18 14:57:45.298 10566 10566 F DEBUG   :       #05 pc 000000000009a2b0  /apex/com.android.adbd/bin/adbd (main+328) (BuildId: a5d0cdc6f34f986233469e36f678df01)
+10-18 14:57:46.586  1629  2805 E AdbDebuggingManager: Caught an exception opening the socket: java.io.IOException: No such file or directory
+10-18 14:57:48.589  1629  2805 E AdbDebuggingManager: Caught an exception opening the socket: java.io.IOException: No such file or directory
+10-18 14:57:50.220 10575 10575 I auditd  : type=1400 audit(0.0:355): avc: denied { setcurrent } for comm="adbd" scontext=u:r:adbd:s0 tcontext=u:r:adbd:s0 tclass=process permissive=0
+10-18 14:57:50.220 10575 10575 W adbd    : type=1400 audit(0.0:355): avc: denied { setcurrent } for scontext=u:r:adbd:s0 tcontext=u:r:adbd:s0 tclass=process permissive=0
+10-18 14:57:50.221 10575 10575 F adbd    : main.cpp:161] Could not set SELinux context
+10-18 14:57:50.221 10575 10575 F libc    : Fatal signal 6 (SIGABRT), code -1 (SI_QUEUE) in tid 10575 (adbd), pid 10575 (adbd)
+10-18 14:57:50.304 10578 10578 F DEBUG   : Cmdline: /apex/com.android.adbd/bin/adbd --root_seclabel=u:r:su:s0
+10-18 14:57:50.304 10578 10578 F DEBUG   : pid: 10575, tid: 10575, name: adbd  >>> /apex/com.android.adbd/bin/adbd <<<
+10-18 14:57:50.305 10578 10578 F DEBUG   :       #04 pc 00000000000995b8  /apex/com.android.adbd/bin/adbd (adbd_main(int)+1340) (BuildId: a5d0cdc6f34f986233469e36f678df01)
+10-18 14:57:50.305 10578 10578 F DEBUG   :       #05 pc 000000000009a2b0  /apex/com.android.adbd/bin/adbd (main+328) (BuildId: a5d0cdc6f34f986233469e36f678df01)
+10-18 14:57:50.594  1629  2805 E AdbDebuggingManager: Caught an exception opening the socket: java.io.IOException: No such file or directory
+10-18 14:57:52.598  1629  2805 E AdbDebuggingManager: Caught an exception opening the socket: java.io.IOException: No such file or directory
+10-18 14:57:54.603  1629  2805 E AdbDebuggingManager: Caught an exception opening the socket: java.io.IOException: No such file or directory
+10-18 14:57:55.236 10597 10597 I auditd  : type=1400 audit(0.0:356): avc: denied { setcurrent } for comm="adbd" scontext=u:r:adbd:s0 tcontext=u:r:adbd:s0 tclass=process permissive=0
+10-18 14:57:55.236 10597 10597 W adbd    : type=1400 audit(0.0:356): avc: denied { setcurrent } for scontext=u:r:adbd:s0 tcontext=u:r:adbd:s0 tclass=process permissive=0
+10-18 14:57:55.240 10597 10597 F adbd    : main.cpp:161] Could not set SELinux context
+10-18 14:57:55.240 10597 10597 F libc    : Fatal signal 6 (SIGABRT), code -1 (SI_QUEUE) in tid 10597 (adbd), pid 10597 (adbd)
+10-18 14:57:55.317 10600 10600 F DEBUG   : Cmdline: /apex/com.android.adbd/bin/adbd --root_seclabel=u:r:su:s0
+10-18 14:57:55.317 10600 10600 F DEBUG   : pid: 10597, tid: 10597, name: adbd  >>> /apex/com.android.adbd/bin/adbd <<<
+10-18 14:57:55.318 10600 10600 F DEBUG   :       #04 pc 00000000000995b8  /apex/com.android.adbd/bin/adbd (adbd_main(int)+1340) (BuildId: a5d0cdc6f34f986233469e36f678df01)
+10-18 14:57:55.318 10600 10600 F DEBUG   :       #05 pc 000000000009a2b0  /apex/com.android.adbd/bin/adbd (main+328) (BuildId: a5d0cdc6f34f986233469e36f678df01)
+10-18 14:57:56.611  1629  2805 E AdbDebuggingManager: Caught an exception opening the socket: java.io.IOException: No such file or directory
+10-18 14:57:58.616  1629  2805 E AdbDebuggingManager: Caught an exception opening the socket: java.io.IOException: No such file or directory
+10-18 14:58:00.270 10606 10606 I auditd  : type=1400 audit(0.0:357): avc: denied { setcurrent } for comm="adbd" scontext=u:r:adbd:s0 tcontext=u:r:adbd:s0 tclass=process permissive=0
+10-18 14:58:00.270 10606 10606 W adbd    : type=1400 audit(0.0:357): avc: denied { setcurrent } for scontext=u:r:adbd:s0 tcontext=u:r:adbd:s0 tclass=process permissive=0
+10-18 14:58:00.272 10606 10606 F adbd    : main.cpp:161] Could not set SELinux context
+10-18 14:58:00.273 10606 10606 F libc    : Fatal signal 6 (SIGABRT), code -1 (SI_QUEUE) in tid 10606 (adbd), pid 10606 (adbd)
+10-18 14:58:00.373 10609 10609 F DEBUG   : Cmdline: /apex/com.android.adbd/bin/adbd --root_seclabel=u:r:su:s0
+10-18 14:58:00.373 10609 10609 F DEBUG   : pid: 10606, tid: 10606, name: adbd  >>> /apex/com.android.adbd/bin/adbd <<<
+10-18 14:58:00.374 10609 10609 F DEBUG   :       #04 pc 00000000000995b8  /apex/com.android.adbd/bin/adbd (adbd_main(int)+1340) (BuildId: a5d0cdc6f34f986233469e36f678df01)
+10-18 14:58:00.374 10609 10609 F DEBUG   :       #05 pc 000000000009a2b0  /apex/com.android.adbd/bin/adbd (main+328) (BuildId: a5d0cdc6f34f986233469e36f678df01)
+10-18 14:58:00.621  1629  2805 E AdbDebuggingManager: Caught an exception opening the socket: java.io.IOException: No such file or directory
+10-18 14:58:02.624  1629  2805 E AdbDebuggingManager: Caught an exception opening the socket: java.io.IOException: No such file or directory
+10-18 14:58:04.638  1629  2805 E AdbDebuggingManager: Caught an exception opening the socket: java.io.IOException: No such file or directory
+10-18 14:58:05.293 10617 10617 I auditd  : type=1400 audit(0.0:358): avc: denied { setcurrent } for comm="adbd" scontext=u:r:adbd:s0 tcontext=u:r:adbd:s0 tclass=process permissive=0
+10-18 14:58:05.293 10617 10617 W adbd    : type=1400 audit(0.0:358): avc: denied { setcurrent } for scontext=u:r:adbd:s0 tcontext=u:r:adbd:s0 tclass=process permissive=0
+10-18 14:58:05.295 10617 10617 F adbd    : main.cpp:161] Could not set SELinux context
+10-18 14:58:05.296 10617 10617 F libc    : Fatal signal 6 (SIGABRT), code -1 (SI_QUEUE) in tid 10617 (adbd), pid 10617 (adbd)
+10-18 14:58:05.380 10620 10620 F DEBUG   : Cmdline: /apex/com.android.adbd/bin/adbd --root_seclabel=u:r:su:s0
+10-18 14:58:05.380 10620 10620 F DEBUG   : pid: 10617, tid: 10617, name: adbd  >>> /apex/com.android.adbd/bin/adbd <<<
+10-18 14:58:05.381 10620 10620 F DEBUG   :       #04 pc 00000000000995b8  /apex/com.android.adbd/bin/adbd (adbd_main(int)+1340) (BuildId: a5d0cdc6f34f986233469e36f678df01)
+10-18 14:58:05.381 10620 10620 F DEBUG   :       #05 pc 000000000009a2b0  /apex/com.android.adbd/bin/adbd (main+328) (BuildId: a5d0cdc6f34f986233469e36f678df01)
+10-18 14:58:06.643  1629  2805 E AdbDebuggingManager: Caught an exception opening the socket: java.io.IOException: No such file or directory
+10-18 14:58:08.648  1629  2805 E AdbDebuggingManager: Caught an exception opening the socket: java.io.IOException: No such file or directory
+10-18 14:58:10.283 10632 10632 I auditd  : type=1400 audit(0.0:359): avc: denied { setcurrent } for comm="adbd" scontext=u:r:adbd:s0 tcontext=u:r:adbd:s0 tclass=process permissive=0
+10-18 14:58:10.283 10632 10632 W adbd    : type=1400 audit(0.0:359): avc: denied { setcurrent } for scontext=u:r:adbd:s0 tcontext=u:r:adbd:s0 tclass=process permissive=0
+10-18 14:58:10.284 10632 10632 F adbd    : main.cpp:161] Could not set SELinux context
+10-18 14:58:10.284 10632 10632 F libc    : Fatal signal 6 (SIGABRT), code -1 (SI_QUEUE) in tid 10632 (adbd), pid 10632 (adbd)
+10-18 14:58:10.332 10635 10635 F DEBUG   : Cmdline: /apex/com.android.adbd/bin/adbd --root_seclabel=u:r:su:s0
+10-18 14:58:10.332 10635 10635 F DEBUG   : pid: 10632, tid: 10632, name: adbd  >>> /apex/com.android.adbd/bin/adbd <<<
+10-18 14:58:10.332 10635 10635 F DEBUG   :       #04 pc 00000000000995b8  /apex/com.android.adbd/bin/adbd (adbd_main(int)+1340) (BuildId: a5d0cdc6f34f986233469e36f678df01)
+10-18 14:58:10.332 10635 10635 F DEBUG   :       #05 pc 000000000009a2b0  /apex/com.android.adbd/bin/adbd (main+328) (BuildId: a5d0cdc6f34f986233469e36f678df01)
+10-18 14:58:10.651  1629  2805 E AdbDebuggingManager: Caught an exception opening the socket: java.io.IOException: No such file or directory
+10-18 14:58:12.653  1629  2805 E AdbDebuggingManager: Caught an exception opening the socket: java.io.IOException: No such file or directory
+10-18 14:58:14.656  1629  2805 E AdbDebuggingManager: Caught an exception opening the socket: java.io.IOException: No such file or directory
